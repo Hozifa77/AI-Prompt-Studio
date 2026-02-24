@@ -49,7 +49,7 @@ const Router = {
                 const page = item.dataset.page;
 
                 // Premium lock check
-                const premiumPages = ['carousel', 'video', 'analysts', 'researchers'];
+                const premiumPages = ['gen-video', 'gen-doc', 'gen-audio', 'analysts', 'researchers'];
                 if (premiumPages.includes(page) && Store.get('plan') === 'free') {
                     document.getElementById('premium-modal').classList.remove('hidden');
                     return;

@@ -11,12 +11,14 @@
 
     // Register all pages with the router
     Router.register('dashboard', () => DashboardPage.render());
-    Router.register('optimizer', () => OptimizerPage.render());
-    Router.register('designers', () => DesignersPage.render());
+    Router.register('prompt-image', () => PromptImagePage.render());
+    Router.register('prompt-video', () => PromptVideoPage.render());
     Router.register('developers', () => DevelopersPage.render());
     Router.register('writers', () => WritersPage.render());
-    Router.register('carousel', () => CarouselPage.render());
-    Router.register('video', () => VideoPage.render());
+    Router.register('gen-image', () => GenImagePage.render());
+    Router.register('gen-video', () => GenVideoPage.render());
+    Router.register('gen-doc', () => GenDocPage.render());
+    Router.register('gen-audio', () => GenAudioPage.render());
     Router.register('analysts', () => AnalystsPage.render());
     Router.register('marketers', () => MarketersPage.render());
     Router.register('researchers', () => ResearchersPage.render());

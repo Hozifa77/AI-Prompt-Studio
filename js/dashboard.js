@@ -43,7 +43,8 @@ const DashboardPage = {
       <div class="modules-section">
         <h2>Prompt Lab <span style="font-size:0.5em; opacity:0.6; font-weight:normal; vertical-align:middle; margin-left:8px;">100% Free</span></h2>
         <div class="modules-grid stagger-children" style="margin-bottom: var(--sp-8);">
-          ${this._moduleCard('optimizer', '✨', 'Prompt Optimizer', 'Enhance your basic prompts into highly effective, structured instructions.', ['Enhance', 'Structure', 'Best Practices'], '#10B981')}
+          ${this._moduleCard('prompt-image', '🎨', 'Image Prompts', 'Generate visual AI prompts for Midjourney, Leonardo, and Stable Diffusion.', ['Image AI', 'Visual', 'Creative'], 'var(--grad-designers)')}
+          ${this._moduleCard('prompt-video', '🎬', 'Video Prompts', 'Generate scripts, scene breakdowns, and voice-over scripts.', ['Script', 'Video', 'Production'], 'var(--grad-video)')}
           ${this._moduleCard('writers', '✍️', 'Writers', 'Improve, expand, simplify, or SEO optimize any content with AI frameworks.', ['Content', 'SEO', 'Copy'], 'var(--grad-writers)')}
           ${this._moduleCard('developers', '⌨️', 'Developers', 'Build code prompts, architecture plans, database schemas, and API structures.', ['Code', 'Architecture', 'API'], 'var(--grad-developers)')}
           ${this._moduleCard('marketers', '📈', 'Marketers', 'Create ad copy, hooks, funnel structures, and full campaign strategies.', ['Marketing', 'Ads', 'Funnel'], 'var(--grad-marketers)')}
@@ -51,9 +52,10 @@ const DashboardPage = {
 
         <h2>Generator Studio <span style="font-size:0.5em; opacity:0.6; font-weight:normal; vertical-align:middle; margin-left:8px;">Credit Based</span></h2>
         <div class="modules-grid stagger-children">
-          ${this._moduleCard('designers', '🎨', 'Image Generator', 'Generate final images directly or fine-tuned visual AI prompts.', ['DALL-E', 'Midjourney', 'Styles'], 'var(--grad-designers)')}
-          ${this._moduleCard('carousel', '🎠', 'Carousel Plan', 'Generate high-converting carousels with slide text and visual layouts.', ['Social', 'Slides', 'Hook'], '#EC4899', true)}
-          ${this._moduleCard('video', '🎬', 'Video Generator', 'Generate scripts, voiceovers, and Runway/Sora scene generation.', ['Video', 'Voice', 'Script'], 'var(--grad-video)', true)}
+          ${this._moduleCard('gen-image', '🖼️', 'Image Generator', 'Generate final images or multi-slide Carousels directly.', ['Images', 'Pollinations', 'Carousel'], 'var(--grad-designers)')}
+          ${this._moduleCard('gen-video', '🎞️', 'Video Generator', 'Generate final downloadable MP4 videos using advanced AI models.', ['Video', 'Generation', 'MP4'], 'var(--grad-video)', true)}
+          ${this._moduleCard('gen-doc', '📄', 'Doc Generator', 'Generate fully formatted text and markdown documents directly.', ['Documents', 'Generators', 'Files'], 'var(--grad-writers)', true)}
+          ${this._moduleCard('gen-audio', '🎧', 'Audio Generator', 'Generate and download text-to-speech AI voices or music.', ['Audio', 'TTS', 'MP3'], 'var(--grad-marketers)', true)}
           ${this._moduleCard('analysts', '📊', 'Data Analysis', 'Summarize data, extract insights, and generate full analytical reports.', ['Data', 'Export', 'Reports'], 'var(--grad-analysts)', true)}
           ${this._moduleCard('researchers', '🔬', 'Research & Export', 'Build research outlines, literature reviews, and export formatted papers.', ['Academic', 'Documents', 'PDF'], 'var(--grad-researchers)', true)}
         </div>
