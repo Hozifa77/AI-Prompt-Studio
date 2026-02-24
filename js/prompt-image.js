@@ -122,7 +122,7 @@ const PromptImagePage = {
             model,
             settings,
             content: prompt,
-            title: \`\${settings.imageType || 'Auto'} — \${settings.mood || 'Auto'}\`,
+            title: `${settings.imageType || 'Auto'} — ${settings.mood || 'Auto'}`,
     };
 
     const output = document.getElementById('pi-output');

@@ -127,7 +127,7 @@ const PromptVideoPage = {
             model,
             settings,
             content: prompt,
-            title: \`\${settings.videoType || 'Auto'} — \${settings.scriptStyle || 'Auto'}\`,
+            title: `${settings.videoType || 'Auto'} — ${settings.scriptStyle || 'Auto'}`,
     };
 
     const output = document.getElementById('pv-output');

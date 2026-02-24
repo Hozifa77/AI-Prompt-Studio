@@ -23,7 +23,7 @@ const GenImagePage = {
                         <label class="control-label">Tool Mode</label>
                         <div class="module-tabs" id="gi-mode-tabs">
                             <button class="module-tab active" data-value="single">Single Image</button>
-                            <button class="module-tab" data-value="carousel" ${isFree ? 'onclick="document.getElementById(\\'premium-modal\\').classList.remove(\\'hidden\\')"' : ''
+                            <button class="module-tab" data-value="carousel" ${isFree ? 'onclick="document.getElementById(\'premium-modal\').classList.remove(\'hidden\')"' : ''
     }> Carousel Generator ${ isFree ?'🔒': ''}</button>
                         </div >
                     </div >
@@ -119,13 +119,13 @@ const GenImagePage = {
         const width = this._selectedMode === 'carousel' ? 1080 : 1024;
         const height = this._selectedMode === 'carousel' ? 1350 : 1024;
         
-        const imageUrl = \`https://image.pollinations.ai/prompt/\${encodeURIComponent(desc)}?width=\${width}&height=\${height}&nologo=true&seed=\${seed}\`;
+        const imageUrl = `https://image.pollinations.ai/prompt/${encodeURIComponent(desc)}?width=${width}&height=${height}&nologo=true&seed=${seed}`;
         
         // Load image unseen to check when it finishes
         const img = new Image();
         img.onload = () => {
             this._currentUrl = imageUrl;
-            output.innerHTML = \`<img src="\${imageUrl}" style="max-width: 100%; max-height: 500px; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.5);" />\`;
+            output.innerHTML = `<img src="${imageUrl}" style="max-width: 100%; max-height: 500px; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.5);" />`;
             actions.style.display = 'flex';
             Utils.toast('Image generated successfully! ✨', 'success');
         };
@@ -149,7 +149,7 @@ const GenImagePage = {
               const a = document.createElement('a');
               a.style.display = 'none';
               a.href = url;
-              a.download = \`generated-\${this._selectedMode}-\${Date.now()}.jpg\`;
+              a.download = `generated-${this._selectedMode}-${Date.now()}.jpg`;
               document.body.appendChild(a);
               a.click();
               window.URL.revokeObjectURL(url);

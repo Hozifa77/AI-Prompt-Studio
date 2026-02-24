@@ -129,7 +129,7 @@ const GenAudioPage = {
             const placeholderAudioTTS = "https://actions.google.com/sounds/v1/water/rain_on_roof.ogg";
             this._currentUrl = placeholderAudioTTS;
 
-            output.innerHTML = \`<audio src="\${placeholderAudioTTS}" controls autoplay style="width: 100%; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.5); padding: 10px; background: rgba(255,255,255,0.05);"></audio>\`;
+            output.innerHTML = `<audio src="${placeholderAudioTTS}" controls autoplay style="width: 100%; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.5); padding: 10px; background: rgba(255,255,255,0.05);"></audio>`;
             actions.style.display = 'flex';
             Utils.toast('Audio generated successfully! 🎧', 'success');
         }, 3000);
@@ -141,7 +141,7 @@ const GenAudioPage = {
         const a = document.createElement('a');
         a.style.display = 'none';
         a.href = this._currentUrl;
-        a.download = \`generated-\${this._selectedType}-\${Date.now()}.mp3\`;
+        a.download = `generated-${this._selectedType}-${Date.now()}.mp3`;
         document.body.appendChild(a);
         a.click();
         document.body.removeChild(a);

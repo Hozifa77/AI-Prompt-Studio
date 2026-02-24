@@ -112,10 +112,10 @@ const GenDocPage = {
 
         // Generate Text Document via text.pollinations.ai
         // Use a generic prompt construction for better output
-        const formattedPrompt = \`Generate a highly detailed \${this._selectedMode} document. Avoid intro/outro conversational filler, just produce the requested document body. INSTRUCTIONS: \${desc}\`;
+        const formattedPrompt = `Generate a highly detailed ${this._selectedMode} document. Avoid intro/outro conversational filler, just produce the requested document body. INSTRUCTIONS: ${desc}`;
         
         try {
-            const response = await fetch(\`https://text.pollinations.ai/\${encodeURIComponent(formattedPrompt)}\`);
+            const response = await fetch(`https://text.pollinations.ai/${encodeURIComponent(formattedPrompt)}`);
             const data = await response.text();
             
             if (response.ok && data) {
@@ -151,7 +151,7 @@ const GenDocPage = {
         const a = document.createElement('a');
         a.style.display = 'none';
         a.href = url;
-        a.download = \`generated-document-\${Date.now()}.\${this._selectedMode === 'markdown' ? 'md' : 'txt'}\`;
+        a.download = `generated-document-${Date.now()}.${this._selectedMode === 'markdown' ? 'md' : 'txt'}`;
         document.body.appendChild(a);
         a.click();
         window.URL.revokeObjectURL(url);

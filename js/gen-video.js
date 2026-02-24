@@ -144,7 +144,7 @@ const GenVideoPage = {
             const placeholderVideoURL = "https://videos.pexels.com/video-files/3163534/3163534-uhd_2560_1440_24fps.mp4";
             this._currentUrl = placeholderVideoURL;
 
-            output.innerHTML = \`<video src="\${placeholderVideoURL}" controls autoplay loop muted style="max-width: 100%; max-height: 500px; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.5);"></video>\`;
+            output.innerHTML = `<video src="${placeholderVideoURL}" controls autoplay loop muted style="max-width: 100%; max-height: 500px; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.5);"></video>`;
             actions.style.display = 'flex';
             Utils.toast('Video generated successfully! 🎬', 'success');
         }, progressSteps.length * 1500 + 1000);
@@ -156,7 +156,7 @@ const GenVideoPage = {
         const a = document.createElement('a');
         a.style.display = 'none';
         a.href = this._currentUrl;
-        a.download = \`generated-video-\${Date.now()}.mp4\`;
+        a.download = `generated-video-${Date.now()}.mp4`;
         document.body.appendChild(a);
         a.click();
         document.body.removeChild(a);
